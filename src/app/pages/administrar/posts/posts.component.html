@@ -1,0 +1,17 @@
+<app-back-button
+    [ruta]="'administrar'">
+</app-back-button>
+<div class="post__container">
+    <app-tabla-post (showFormPost)="openFormPost($event)">
+    </app-tabla-post>
+
+    <button [hidden]="!hiddenForm"
+            (click)="openFormNewPost()">
+        Nevo
+    </button>
+    
+    <app-new-post-form  [entrada]="post"
+                        *ngIf="!hiddenForm"
+                        (resetPost)="onHiddenForm($event)">
+    </app-new-post-form>
+</div>

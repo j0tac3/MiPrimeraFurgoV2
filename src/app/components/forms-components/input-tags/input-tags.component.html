@@ -1,0 +1,28 @@
+<div    class="input__group"
+        [formGroup]="formGroupParent">
+    <label  for="etiquetas"
+            class="label__item">
+        Etiquetas
+    </label>
+    <div>
+        <input  type="text" 
+        name="etiquetas"
+        class="input__item input__etiqueta"
+        formControlName="etiquetasComponent"
+        placeholder="Escapada ..."
+        (keydown.enter)='addTagToArray()'>
+    </div>    
+</div>
+<button class="btn__add--tag"
+    (click)='addTagToArray()'>
+</button>
+<div class="etiquetas__group">
+    <span *ngFor="let etiqueta of etiquetas"
+    class="etiqueta">
+        {{ etiqueta.desc }}
+        <button [hidden]="!etiqueta.desc"
+                    class="img__cancel"
+                    (click)='deleteTag(etiqueta)'>
+        </button>
+    </span>
+</div>

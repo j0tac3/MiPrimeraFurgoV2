@@ -1,0 +1,59 @@
+
+<div class="form-container" class="form-container">
+    <form   class="form"
+            action=""
+            [formGroup]="formEntrada"            
+            #f="ngForm">
+        <div class="input-group">
+            <label  for="titulo" 
+                    class="label__item">
+                Título
+            </label>
+            <input  type="text" 
+                    class="input__item"
+                    name="titulo"
+                    formControlName="titulo"
+                    placeholder="Mi primer viaje ...">
+        </div>
+        <div class="input-group">
+            <label  for="subtitulo" 
+                    class="label__item">
+                Subtitulo
+            </label>
+            <input  type="text" 
+                    class="input__item"
+                    name="subtitulo"
+                    formControlName="subtitulo"
+                    placeholder="Playas de Euskadi ...">
+        </div>
+        <app-input-image-header [formGroupParent]="formEntrada"
+                                [headerImage]="headerImage"
+                                (changeImage)="onChangeImage($event)">
+        </app-input-image-header>
+        <app-input-tags    [formGroupParent]="formEntrada"
+                                [etiquetas]="etiquetas">
+        </app-input-tags>
+
+        <app-sections-region  [secciones]="secciones"
+                            [formSeccionVisible]="formSeccionVisible"
+                            (showFormEvent)="openFormSeccion($event)">
+        </app-sections-region>
+        <div class="buttons-container">
+            <button type="button" class="btn btn-primary" 
+                    [hidden]="showFormSeccion"
+                    (click)="savePost( f )">
+                Guardar Post
+            </button>
+            <button type="button" class="btn btn-warning"
+                    [hidden]="showFormSeccion"
+                    (click)="onResetPost()">
+                Cancelar
+            </button>
+        </div>
+    </form>
+    <app-form-section   [showFormSeccion]="showFormSeccion"
+                        [nSecciones]="secciones.length"
+                        (addNewSeccionEvent)="addNewSeccion($event)"
+                        *ngIf="showFormSeccion">
+    </app-form-section>
+</div>

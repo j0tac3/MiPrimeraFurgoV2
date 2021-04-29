@@ -1,0 +1,9 @@
+<div class="section__miniature">
+    <img    *ngIf="seccionInfo.urlimage !== undefined; else elseBlock" src="{{ url_imgSeccion }}" alt=""
+            class="miniature__img">
+    <ng-template #elseBlock>
+        <img src="assets/media/icons/image_default.svg" alt=""
+            class="miniature__img">
+    </ng-template>
+    <span class="miniature__text">{{ seccionInfo.seccion.orden }}</span>
+</div>

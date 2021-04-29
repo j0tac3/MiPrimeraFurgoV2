@@ -1,0 +1,20 @@
+<div class="table">
+    <table class="table__post">
+        <thead>
+            <!-- <th>#</th> -->
+            <th>ID</th>
+            <th>Titulo</th>
+        </thead>
+        <tr *ngFor="let post of postsFromDB">
+            <!-- <td>{{ post.id }}</td> -->
+            <td>{{ post.id }}</td>
+            <td>{{ post.titulo }}</td>
+            <td>
+                <button (click)="onShowFormPost(post)">Edit</button>
+            </td>
+            <td>
+                <button (click)="deletePost(post)">Del</button>
+            </td>
+        </tr>
+    </table>
+</div>
