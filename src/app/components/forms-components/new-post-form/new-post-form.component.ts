@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 import { EtiquetaModel } from 'src/app/models/etiqueta.model';
 import { PostModel } from 'src/app/models/post.model';
-import { SeccionImageModel } from 'src/app/models/SeccionImage.model';
+import { SeccionImageModel } from 'src/app/models/seccionImage.model';
 import { PostsService } from 'src/app/service/posts.service';
 import { TagsService } from 'src/app/service/tags.service';
 import { TagPostService } from 'src/app/service/tag-post.service';
