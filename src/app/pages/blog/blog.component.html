@@ -12,7 +12,8 @@
             <h3 class="most-recent-title">Ultimos Articulos</h3>
             <ul class="most__recent-list">
                 <li *ngFor="let postToList of mostRecentPosts">
-                    <a href="">{{ postToList.titulo }} - {{ postToList.timeFrom}}</a>
+                    <a href="">{{ postToList.titulo }}</a>
+                    <app-post-info></app-post-info>
                 </li>
             </ul>
         </div>
