@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PostMiniatureComponent } from './post-miniature.component';
 
@@ -6,7 +6,7 @@ describe('PostMiniatureComponent', () => {
   let component: PostMiniatureComponent;
   let fixture: ComponentFixture<PostMiniatureComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PostMiniatureComponent ]
     })
