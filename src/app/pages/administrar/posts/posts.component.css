@@ -1,4 +1,6 @@
 .post__container{
+    width: 60%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -6,6 +8,7 @@
 
 .info__container{
     display: grid;
+    margin: 1rem 0;
 }
 
 .btn__addNewPost{
