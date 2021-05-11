@@ -13,7 +13,7 @@
             <ul class="most__recent-list">
                 <li *ngFor="let postToList of mostRecentPosts">
                     <a href="">{{ postToList.titulo }}</a>
-                    <app-post-info></app-post-info>
+                    <app-post-info [post]="postToList"></app-post-info>
                 </li>
             </ul>
         </div>

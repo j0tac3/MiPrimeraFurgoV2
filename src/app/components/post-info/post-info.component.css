@@ -1,14 +1,14 @@
 .info__container{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 .icons__info{
-    /*width: 2.2rem;*/
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     font-size: 0.8rem;
+    margin-right: 0.4rem;
 }
 .comments__icon{
     width: 1.2rem;
