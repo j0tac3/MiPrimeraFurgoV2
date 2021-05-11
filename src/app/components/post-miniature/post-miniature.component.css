@@ -1,0 +1,37 @@
+.miniauture__container{
+    width: 10rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.miniature__titulo{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.miniature__image {
+    width: 100%;
+    /* border-radius: 5px; */
+    filter: grayscale(60%);
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 0.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+    align-self: center;
+}
+
+.miniature__image:hover{
+    /* transform: translate(-2px, -2px); */
+    box-shadow: 5px 5px 15px 1px #aaaa;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 760px){
+    .miniauture__container{
+        width: 100%;
+    }
+    
+}

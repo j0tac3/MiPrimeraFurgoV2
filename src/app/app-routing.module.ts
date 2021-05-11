@@ -8,6 +8,9 @@ import { AdministrarComponent } from "./pages/administrar/administrar.component"
 import { PostsComponent } from "./pages/administrar/posts/posts.component";
 import { TagsComponent } from "./pages/administrar/tags/tags.component";
 import { UsersComponent } from "./pages/administrar/users/users.component";
+import { CatalogComponent } from './pages/administrar/catalog/catalog.component';
+import { UsuariosComponent } from './pages/administrar/usuarios/usuarios.component';
+import { CamperizacionComponent } from './pages/administrar/camperizacion/camperizacion.component';
 
 const APP_ROUTES: Routes = [
   {path: 'home', component: HomeComponent },
@@ -17,7 +20,10 @@ const APP_ROUTES: Routes = [
   {path: 'administrar', component: AdministrarComponent },
   {path: 'administrar/etiquetas', component: TagsComponent },
   {path: 'administrar/entradas', component: PostsComponent },
-  {path: 'usuarios', component: UsersComponent },
+  {path: 'administrar/catalogo', component: CatalogComponent },
+  {path: 'administrar/usuarios', component: UsuariosComponent },
+  {path: 'administrar/camperizacion', component: CamperizacionComponent },
+  {path: 'usuarios', component: UsuariosComponent },
   {path: '', pathMatch: 'full', redirectTo: 'home'}
 ];
 

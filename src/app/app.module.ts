@@ -26,6 +26,12 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TablaPostComponent } from './components/tablas/tabla-post/tabla-post.component';
+import { PostMiniatureComponent } from './components/post-miniature/post-miniature.component';
+import { PostInfoComponent } from './components/post-info/post-info.component';
+import { CatalogComponent } from './pages/administrar/catalog/catalog.component';
+import { MenuAdministrarComponent } from './components/menu-administrar/menu-administrar.component';
+import { UsuariosComponent } from './pages/administrar/usuarios/usuarios.component';
+import { CamperizacionComponent } from './pages/administrar/camperizacion/camperizacion.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +56,12 @@ import { TablaPostComponent } from './components/tablas/tabla-post/tabla-post.co
     NavbarComponent,
     HeaderComponent,
     TablaPostComponent,
+    PostMiniatureComponent,
+    PostInfoComponent,
+    CatalogComponent,
+    MenuAdministrarComponent,
+    UsuariosComponent,
+    CamperizacionComponent,
   ],
   imports: [
     BrowserModule,

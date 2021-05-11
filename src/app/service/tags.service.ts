@@ -14,7 +14,6 @@ export class TagsService {
   createTag( tag: EtiquetaModel): Observable<any> {
     const headers = { 'content-type' : 'application/json' };
     const body = JSON.stringify(tag);
-    console.log(body);
     return this.http.post<EtiquetaModel>(this.url, body, {'headers': headers});
   }
 
@@ -37,5 +36,11 @@ export class TagsService {
     });
 
     return tags;
+  }
+
+  deleteTag(tag: EtiquetaModel): Observable<any> {
+    const headers = { 'content-type' : 'application/json' };
+    const body = JSON.stringify(tag.id);
+    return this.http.delete<EtiquetaModel>(`${this.url}/${tag.id}`, {'headers': headers})
   }
 }

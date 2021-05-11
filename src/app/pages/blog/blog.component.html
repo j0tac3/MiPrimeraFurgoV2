@@ -1,1 +1,20 @@
-<p>blog works!</p>
+<h1 style="text-align: center;">Mis Aventuras</h1>
+<div class="blog__container">
+    <div class="container__posts">
+        <app-post-miniature 
+            class="container__miniature"
+            *ngFor="let post of postsFromDB"
+            [post]="post">
+        </app-post-miniature>
+    </div>
+    <div class="aside">
+        <div class="container_most-recent">
+            <h3 class="most-recent-title">Ultimos Articulos</h3>
+            <ul class="most__recent-list">
+                <li *ngFor="let postToList of mostRecentPosts">
+                    <a href="">{{ postToList.titulo }} - {{ postToList.timeFrom}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

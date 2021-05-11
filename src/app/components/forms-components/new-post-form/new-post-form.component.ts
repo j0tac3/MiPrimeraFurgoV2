@@ -120,20 +120,16 @@ export class NewPostFormComponent implements OnInit {
       this.entrada.headerImage = this.formEntrada.get('headerImage')[0];
     }
     if ( this.entrada.id) {
-      //this.postService.updatePost( this.entrada )
-      this.postService.updatePost( this.formEntrada, this.entrada )
+      this.postService.updatePost( this.entrada )
       .subscribe( resp => {
         console.log(resp);
-        this.entrada.id = resp.id;
-        this.entrada.updated_at = resp.updated_at;
-        this.entrada.created_at = resp.created_at;
+        this.entrada = resp['data'];
         this.guardarEtiquetas();
       });
     } else {
-      //this.postService.updatePost( this.entrada )
       this.postService.crearPost( this.entrada )
       .subscribe(resp => {
-        this.entrada = resp;
+        this.entrada = resp['data'];
         this.guardarEtiquetas();
       });
     }

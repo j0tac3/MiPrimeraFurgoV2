@@ -39,29 +39,43 @@ export class TagsComponent implements OnInit {
     }
     this.etiqueta.desc = this.formTags.get('desc').value;
     if ( this.etiqueta.id) {
-      this.etiquetasSerivice.updateTag( this.etiqueta )
-      .subscribe( resp => {
-        console.log(resp);
-      });
+      this.etiquetasSerivice.updateTag( this.etiqueta );
     } else {
-      this.etiquetasSerivice.createTag( this.etiqueta )
-      .subscribe( resp => {
-        console.log(resp);
-      });
+      this.etiquetasSerivice.createTag( this.etiqueta );
     }
     this.etiquetas.push(this.etiqueta);
     this.formTags.get('desc').reset();
+    this.ordenarEtiquetas();
   }
 
   getTags(){
-    this.etiquetasSerivice.getTags()
-    .subscribe( resp =>  {
-      this.etiquetas = resp;
-    });
-    console.log(`Etiquetas: ${this.etiquetas}`);
+      this.etiquetasSerivice.getTags()
+      .subscribe( resp =>  {
+        this.etiquetas = resp;
+        this.ordenarEtiquetas();
+      });
     }
 
   get descValid() {
     return this.formTags.get('desc').invalid && this.formTags.get('desc').touched;
+  }
+
+  deleteTag(tag: EtiquetaModel){
+    this.etiquetasSerivice.deleteTag(tag)
+    .subscribe(resp => {
+      this.etiquetas.splice(this.etiquetas.indexOf(tag), 1);
+    });
+  }
+
+  ordenarEtiquetas(): any {
+    this.etiquetas.sort( function(a, b) {
+      if (a.desc > b.desc) {
+        return 1;
+      }
+      if (a.desc < b.desc){
+        return -1;
+      }
+      return 0;
+    })
   }
 }

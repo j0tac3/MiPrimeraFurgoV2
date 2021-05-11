@@ -8,8 +8,12 @@ export class PostModel {
     user_id: number;
     created_at?: Date;
     updated_at?: Date;
+    timeFrom?: string;
     etiquetas: EtiquetaModel[];
     headerImage?: File;
+    comentarios?: [];
+    nComents?: number;
+    views?: number;
 
     constructor() {
         this.titulo = "";

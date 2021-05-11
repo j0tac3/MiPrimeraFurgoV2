@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { UserModel } from '../../../models/user.model';
-import { UserSectionService } from '../../../service/user-section.service'
+import { UserModel } from 'src/app/models/user.model';
+import { UserSectionService } from 'src/app/service/user-section.service';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  selector: 'app-usuarios',
+  templateUrl: './usuarios.component.html',
+  styleUrls: ['./usuarios.component.css']
 })
-export class UsersComponent implements OnInit {
+export class UsuariosComponent implements OnInit {
   public users: UserModel[];
 
   constructor( private _userService: UserSectionService) { }
@@ -20,6 +20,7 @@ export class UsersComponent implements OnInit {
     this._userService.getUsers()
     .subscribe( resp => {
       this.users = resp['data'];
+      console.log(resp);
     })
   }
 

@@ -3,3 +3,14 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.info__container{
+    display: grid;
+}
+
+.btn__addNewPost{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 10rem;
+    justify-self: center;
+}

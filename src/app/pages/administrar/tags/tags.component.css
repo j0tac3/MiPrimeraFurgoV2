@@ -8,6 +8,7 @@
     display: grid;
     justify-content: center;
     color:#aaa;
+    margin-bottom: 1rem;
 }
 .form{
     width: 20rem;
@@ -45,4 +46,31 @@
 .is-invalid{
     color: #F14D36;
     border-bottom: solid 1px #F14D36;
+}
+
+.info__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col__del{
+    display: flex;
+    justify-content: center;
+}
+
+.img__cancel{
+    background-image: url(src/assets/media/icons/cancel.svg);
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: transparent;
+    border-radius: 50%;
+    outline: none;
+}
+
+.img__cancel:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
