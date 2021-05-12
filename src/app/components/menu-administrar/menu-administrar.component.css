@@ -29,6 +29,8 @@
     margin-top: 2rem;
 }
 .icon-container{
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
     width: 3rem;
     height: 3rem;
@@ -48,12 +50,17 @@
 }
 .icon-text{
     font-size: 0.8rem;
-    position: absolute;
-    top: 50%;
+   /*  position: absolute;
+    top: 50%; */
     font-weight: bold;
 }
 .icon-home{
     width: 2rem;
+}
+.active{
+    cursor: pointer;
+    background-color: rgb(82, 82, 82);
+    color: #fff;
 }
 
 @media (max-width: 600px) {

@@ -12,7 +12,6 @@ import { CamperizarComponent } from './pages/camperizar/camperizar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PostsComponent } from './pages/administrar/posts/posts.component';
 import { TagsComponent } from './pages/administrar/tags/tags.component';
-import { UsersComponent } from './pages/administrar/users/users.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormSectionComponent } from './components/forms-components/form-section/form-section.component';
@@ -42,7 +41,6 @@ import { CamperizacionComponent } from './pages/administrar/camperizacion/camper
     HomeComponent,
     PostsComponent,
     TagsComponent,
-    UsersComponent,
     BackButtonComponent,
     FooterComponent,
     FormSectionComponent,
